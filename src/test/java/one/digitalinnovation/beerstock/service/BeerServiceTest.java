@@ -30,6 +30,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+// Diz que tem que usar uma extensão do Mockito para conseguir rodar o teste
 @ExtendWith(MockitoExtension.class)
 public class BeerServiceTest {
 
@@ -40,6 +41,7 @@ public class BeerServiceTest {
 
     private BeerMapper beerMapper = BeerMapper.INSTANCE;
 
+    // Faz uma injeção do BeerRepository
     @InjectMocks
     private BeerService beerService;
 

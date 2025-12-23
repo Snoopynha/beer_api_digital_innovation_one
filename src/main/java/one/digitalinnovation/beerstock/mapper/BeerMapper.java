@@ -5,7 +5,9 @@ import one.digitalinnovation.beerstock.entity.Beer;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+// Cria um mapeamento da classe Beer para não ter que converter os dados para bater com os dados do DTO
+// Não ter que criar o objeto beer e dar set toda vez na função createBeer
+@Mapper(componentModel = "spring")
 public interface BeerMapper {
 
     BeerMapper INSTANCE = Mappers.getMapper(BeerMapper.class);
